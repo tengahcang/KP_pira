@@ -8,7 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Kategori extends Model
 {
     use HasFactory;
-    public function services(){
-        return $this->belongsTo(Layanan::class);
+    public function services()
+    {
+        return $this->hasMany(Layanan::class);
     }
 }
