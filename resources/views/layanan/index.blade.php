@@ -7,30 +7,35 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+    <style>
+
+    </style>
 </head>
 
 <body>
     <div>
-        <a href="{{ route('adminkategori.create') }}">+tambah
+        <a href="{{ route('adminlayanan.create') }}">+tambah
         </a>
     </div>
-    <table>
-        <th>
-            <tr>no</tr>
-            <tr>code</tr>
-            <tr>nama kategori</tr>
-            <tr>aksi</tr>
-        </th>
+    <table border="1">
+        <tr>
+            <th>No.</th>
+            <th>Nama Layanan</th>
+            <th>Detail</th>
+            <th>Kategori</th>
+            <th>aksi</th>
+        </tr>
         <tbody>
-            @foreach ($kategoris as $index => $kategori)
+            @foreach ($layanans as $index => $layanan)
                 <tr>
                     <td>{{ $index + 1 }}</td>
-                    <td>{{ $kategori->kode }}</td>
-                    <td>{{ $kategori->nama_kategori }}</td>
+                    <td>{{ $layanan->nama_layanan }}</td>
+                    <td>{{ $layanan->detail }}</td>
+                    <td>{{ $layanan->id_kategori }}</td>
                     <td>
-                        <a href="{{ route('adminkategori.edit', [$kategori->id]) }}">Edit</a>
+                        <a href="{{ route('adminlayanan.edit', [$layanan->id]) }}">Edit</a>
                         <form onsubmit="return confirm('Apakah Anda Yakin ?');"
-                            action="{{ route('adminkategori.destroy', [$kategori->id]) }}" method="POST">
+                            action="{{ route('adminlayanan.destroy', [$layanan->id]) }}" method="POST">
                             @csrf
                             @method('DELETE')
                             <button type="submit">Hapus</button>

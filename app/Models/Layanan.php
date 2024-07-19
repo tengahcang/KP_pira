@@ -8,7 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Layanan extends Model
 {
     use HasFactory;
-    public function category(){
-        return $this->hasMany(Kategori::class);
+
+    public function category()
+    {
+        return $this->belongsTo(Kategori::class);
     }
 }
