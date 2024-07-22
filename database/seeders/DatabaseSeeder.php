@@ -22,6 +22,8 @@ class DatabaseSeeder extends Seeder
         $this->call([
             kategori::class,
             layanan::class,
+            status::class,
+            laporan::class,
         ]);
     }
 }

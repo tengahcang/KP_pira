@@ -1057,6 +1057,9 @@
                 <a href="{{ route('adminlayanan.index') }}">
                     <h1>index layanan</h1>
                 </a>
+                <a href="{{ route('adminlaporan.index') }}">
+                    <h1>index laporan</h1>
+                </a>
 
 
                 <h2>tes</h2>

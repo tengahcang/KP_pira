@@ -5,11 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Kategori extends Model
+class Status extends Model
 {
     use HasFactory;
-    public function services()
+    public function laporan()
     {
-        return $this->hasMany(Layanan::class, 'id_kategori');
+        return $this->hasMany(Laporan::class, 'id_status');
     }
 }

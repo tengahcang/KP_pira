@@ -9,8 +9,10 @@ class Layanan extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['id_kategori', 'nama_layanan', 'detail'];
+
     public function category()
     {
-        return $this->belongsTo(Kategori::class);
+        return $this->belongsTo(Kategori::class, 'id_kategori');
     }
 }
