@@ -31,7 +31,7 @@
                     <td>{{ $index + 1 }}</td>
                     <td>{{ $layanan->nama_layanan }}</td>
                     <td>{{ $layanan->detail }}</td>
-                    <td>{{ $layanan->id_kategori }}</td>
+                    <td>{{ $layanan->category->nama_kategori }}</td>
                     <td>
                         <a href="{{ route('adminlayanan.edit', [$layanan->id]) }}">Edit</a>
                         <form onsubmit="return confirm('Apakah Anda Yakin ?');"

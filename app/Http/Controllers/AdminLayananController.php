@@ -14,7 +14,8 @@ class AdminLayananController extends Controller
      */
     public function index()
     {
-        $layanans = Layanan::all();
+        $layanans = Layanan::with('category')->get();
+        // dd($layanans);
         return view('layanan.index', compact('layanans'));
     }
 
