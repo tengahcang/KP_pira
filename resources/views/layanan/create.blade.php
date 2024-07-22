@@ -31,7 +31,7 @@
         </div>
         <div>
             <label>Pilih Kategori</label>
-            <select name="id_kategori" id="id_kategori">
+            <select name="nama_kategori" id="nama_kategori">
                 @foreach ($kategoris as $kategori)
                     <option value="{{ $kategori->id }}" {{ old('kategori') == $kategori->id ? 'selected' : '' }}>
                         {{ $kategori->kode . ' - ' . $kategori->nama_kategori }}</option>

@@ -46,7 +46,7 @@ class AdminLayananController extends Controller
             return redirect()->back()->withErrors($validator)->withInput();
         }
         $layanan = new Layanan;
-        $layanan->id_kategori = $request->category;
+        $layanan->id_kategori = $request->nama_kategori;
         $layanan->nama_layanan = $request->nama_layanan;
         $layanan->detail = $request->detail;
         $layanan->save();
@@ -68,8 +68,8 @@ class AdminLayananController extends Controller
     public function edit(string $id)
     {
         //
-        $layanans = Layanan::find($id);
         $kategoris = Kategori::all();
+        $layanans = Layanan::find($id);
         return view('layanan.edit', compact('layanans', 'kategoris'));
     }
 
@@ -91,7 +91,7 @@ class AdminLayananController extends Controller
             return redirect()->back()->withErrors($validator)->withInput();
         }
         $layanan = Layanan::find($id);
-        $layanan->id_kategori = $request->category;
+        $layanan->id_kategori = $request->nama_kategori;
         $layanan->nama_layanan = $request->nama_layanan;
         $layanan->detail = $request->detail;
         $layanan->save();
