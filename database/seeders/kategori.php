@@ -16,15 +16,18 @@ class kategori extends Seeder
         //
         DB::table('kategoris')->insert([
             [
-                'kode' => '001',
-                'nama_kategori' => 'pemasaran',
-            ],[
-                'kode' => '002',
-                'nama_kategori' => 'sdm',
-            ],[
-                'kode' => '003',
-                'nama_kategori' => 'operasional',
+                'kode' => 'IB',
+                'nama_kategori' => 'Internet Bisnis',
+            ], [
+                'kode' => 'OP',
+                'nama_kategori' => 'Operasional',
+            ], [
+                'kode' => 'SDM',
+                'nama_kategori' => 'SDM',
+            ], [
+                'kode' => 'PSR',
+                'nama_kategori' => 'Pemasaran',
             ]
-            ]);
+        ]);
     }
 }

@@ -23,7 +23,9 @@ class DatabaseSeeder extends Seeder
             kategori::class,
             layanan::class,
             status::class,
+            pelanggan::class,
             laporan::class,
+            admin::class,
         ]);
     }
 }

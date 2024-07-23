@@ -1051,15 +1051,13 @@
                             </div>
                         </div>
                     </main> --}}
-                <a href="{{ route('adminkategori.index') }}">
-                    <h1>index kategori</h1>
-                </a>
                 <a href="{{ route('adminlayanan.index') }}">
-                    <h1>index layanan</h1>
+                    <h1>menu admin</h1>
                 </a>
-                <a href="{{ route('adminlaporan.index') }}">
-                    <h1>index laporan</h1>
+                <a href="{{ route('pelanggan.index') }}">
+                    <h1>menu pelanggan</h1>
                 </a>
+
 
 
                 <h2>tes</h2>
