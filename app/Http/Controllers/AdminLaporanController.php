@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Laporan;
+use App\Models\Pelanggan;
 use App\Models\Status;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
@@ -49,8 +50,9 @@ class AdminLaporanController extends Controller
     public function edit(string $id)
     {
         $statuses = Status::all();
+        $pelanggans = Pelanggan::all();
         $laporans = Laporan::find($id);
-        return view('laporan.edit', compact('laporans', 'statuses'));
+        return view('laporan.edit', compact('laporans', 'statuses', 'pelanggans'));
     }
 
     /**

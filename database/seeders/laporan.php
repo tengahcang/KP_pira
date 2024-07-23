@@ -16,12 +16,14 @@ class laporan extends Seeder
         DB::table('laporans')->insert([
             [
                 'id_status' => '1',
+                'id_pelanggan' => '1',
                 'no_pelanggan' => '83729020',
                 'masalah' => 'internet lemot',
                 'solusi' => '',
             ],
             [
                 'id_status' => '2',
+                'id_pelanggan' => '2',
                 'no_pelanggan' => '8280292',
                 'masalah' => 'internet lemot',
                 'solusi' => 'restart'

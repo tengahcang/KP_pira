@@ -15,6 +15,8 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('id_status');
             $table->foreign('id_status')->references('id')->on('statuses');
+            $table->unsignedBigInteger('id_pelanggan');
+            $table->foreign('id_pelanggan')->references('id')->on('pelanggans');
             $table->unsignedBigInteger('no_pelanggan');
             $table->text('masalah');
             $table->text('solusi')->nullable();
